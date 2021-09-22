@@ -3540,6 +3540,7 @@ ImprovedTube.shortcutIncreaseVolume = function () {
                 creation: Date.now()
             })
         })
+        sessionStorage['yt-player-volume'] = localStorage['yt-player-volume']
 
         this.showStatus(player.getVolume());
     }
@@ -3564,6 +3565,7 @@ ImprovedTube.shortcutDecreaseVolume = function () {
                 creation: Date.now()
             })
         })
+        sessionStorage['yt-player-volume'] = localStorage['yt-player-volume']
 
         this.showStatus(player.getVolume());
     }
