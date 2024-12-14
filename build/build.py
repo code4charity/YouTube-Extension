@@ -41,12 +41,12 @@ def chromium(browser):
 			item != '.git' and
 			item != '.github' and
 			item != 'cached' and
-			item != 'previews' and
-			item != 'py' and
-			item != 'wiki' and
+			item != 'node_modules' and
+			item != 'build' and
+			item != 'config' and
+			item != 'tests' and
 			item != 'LICENSE' and
-			item != 'README.md' and
-			item != 'SECURITY.md' and
+			item != 'CONTRIBUTING.md' and
 			item.find('.zip') == -1
 		):
 			s = os.path.join('../', item)
@@ -94,19 +94,20 @@ def firefox():
 	os.chdir(temporary_path)
 
 	for item in os.listdir('../'):
+
 		if (
 			item != '.git' and
 			item != '.github' and
 			item != 'cached' and
-			item != 'previews' and
-			item != 'py' and
-			item != 'wiki' and
+			item != 'node_modules' and
+			item != 'build' and
+			item != 'config' and
+			item != 'tests' and
 			item != 'LICENSE' and
-			item != 'README.md' and
-			item != 'SECURITY.md' and
+			item != 'CONTRIBUTING.md' and
 			item.find('.zip') == -1
 		):
-			s = os.path.join('../', item)
+		s = os.path.join('../', item)
 			d = os.path.join(temporary_path, item)
 			if os.path.isdir(s):
 				shutil.copytree(s, d, True, None)
