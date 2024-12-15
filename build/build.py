@@ -41,7 +41,7 @@ def chromium(browser):
 	os.chdir(temporary_path)
 
 	for item in os.listdir('../'):
-		if item not in excluded_items and item.find('.zip') == -1: 
+		if item not in excluded and item.find('.zip') == -1: 
 			s = os.path.join('../', item)
 			d = os.path.join(temporary_path, item)
 			if os.path.isdir(s):
@@ -88,7 +88,7 @@ def firefox():
 
 	for item in os.listdir('../'):
 
-		if item not in excluded_items and item.find('.zip') == -1: 
+		if item not in excluded and item.find('.zip') == -1: 
 		s = os.path.join('../', item)
 			d = os.path.join(temporary_path, item)
 			if os.path.isdir(s):
