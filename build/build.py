@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 excluded = { 
-	'.git', '.github', 'README.md', 'SECURITY.md', 'LICENSE', 'CONTRIBUTING.md', 'wiki'
-	'cached', 'node_modules', 'config', 'tests', 'build', 'previews', 'py'
+	'.git', '.github'
+	# ,'README.md', 'SECURITY.md', 'LICENSE', 'CONTRIBUTING.md', 'wiki'
+	,'cached', 'node_modules', 'config', 'tests', 'build', 'py'
+	# ,'previews'
 }
-
 #---------------------------------------------------------------
 # >>> TABLE OF CONTENTS:
 #---------------------------------------------------------------
