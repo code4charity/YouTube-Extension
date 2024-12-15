@@ -1,6 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+excluded = { 
+	'.git', '.github', 'README.md', 'SECURITY.md', 'LICENSE', 'CONTRIBUTING.md', 'wiki'
+	'cached', 'node_modules', 'config', 'tests', 'build', 'previews', 'py'
+}
+
 #---------------------------------------------------------------
 # >>> TABLE OF CONTENTS:
 #---------------------------------------------------------------
@@ -22,7 +27,6 @@ import pathlib
 import re
 import zipfile
 
-
 #---------------------------------------------------------------
 # 2.0 CHROMIUM
 #---------------------------------------------------------------
@@ -37,18 +41,7 @@ def chromium(browser):
 	os.chdir(temporary_path)
 
 	for item in os.listdir('../'):
-		if (
-			item != '.git' and
-			item != '.github' and
-			item != 'cached' and
-			item != 'node_modules' and
-			item != 'build' and
-			item != 'config' and
-			item != 'tests' and
-			item != 'LICENSE' and
-			item != 'CONTRIBUTING.md' and
-			item.find('.zip') == -1
-		):
+		if item not in excluded_items and item.find('.zip') == -1: 
 			s = os.path.join('../', item)
 			d = os.path.join(temporary_path, item)
 			if os.path.isdir(s):
@@ -95,23 +88,7 @@ def firefox():
 
 	for item in os.listdir('../'):
 
-		if (
-			item != '.git' and
-			item != '.github' and
-			item != 'cached' and
-			item != 'node_modules' and
-			item != 'build' and
-			item != 'config' and
-			item != 'tests' and
-			item != 'LICENSE' and
-			item != 'CONTRIBUTING.md' and
-			item != 'README.md' and
-			item != 'SECURITY.md' and
-			item != 'previews' and
-			item != 'py' and
-			item != 'wiki' and
-			item.find('.zip') == -1
-		):
+		if item not in excluded_items and item.find('.zip') == -1: 
 		s = os.path.join('../', item)
 			d = os.path.join(temporary_path, item)
 			if os.path.isdir(s):
