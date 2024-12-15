@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest tests",
-    "lint": "eslint . --no-eslintrc -c config/eslint.config.js",
-    "lint:fix": "eslint . --fix --no-eslintrc -c config/eslint.config.js",
+    "lint": "eslint . -c config/eslint.config.js",
+    "lint:fix": "eslint . --fix -c config/eslint.config.js",
     "format": "prettier --write . --config config/prettier.config.js"
   },
   "keywords": [],
@@ -15,7 +15,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "@eslint/js": "^9.16.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.17.0",
     "jest": "^29.7.0",
     "jslint": "^0.12.1",
     "globals": "^15.13.0",
