@@ -3,9 +3,8 @@
 
 excluded = { 
 	'.git', '.github'
-	# ,'README.md', 'SECURITY.md', 'LICENSE', 'CONTRIBUTING.md', 'wiki'
-	,'cached', 'node_modules', 'config', 'tests', 'build', 'py'
-	# ,'previews'
+	# ,'README.md', 'SECURITY.md', 'LICENSE', 'CONTRIBUTING.md', 'wiki' ,'previews'
+	,'cached', 'node_modules', 'config', 'jest.config.js', 'package-lock.json', 'package.json, 'tests', 'build', 'py'
 }
 #---------------------------------------------------------------
 # >>> TABLE OF CONTENTS:
