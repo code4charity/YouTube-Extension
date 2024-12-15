@@ -105,6 +105,11 @@ def firefox():
 			item != 'tests' and
 			item != 'LICENSE' and
 			item != 'CONTRIBUTING.md' and
+			item != 'README.md' and
+			item != 'SECURITY.md' and
+			item != 'previews' and
+			item != 'py' and
+			item != 'wiki' and
 			item.find('.zip') == -1
 		):
 		s = os.path.join('../', item)
