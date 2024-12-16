@@ -19,8 +19,6 @@ import shutil
 import argparse
 import json
 import os
-import pathlib
-import re
 import zipfile
 
 #---------------------------------------------------------------
@@ -28,9 +26,9 @@ import zipfile
 #---------------------------------------------------------------
 
 excluded = {
-    '.git', '.github'
-    # ,'README.md', 'SECURITY.md', 'LICENSE', 'CONTRIBUTING.md', 'wiki' ,'previews'
-    ,'cached', 'node_modules', 'config', 'jest.config.js', 'package-lock.json', 'package.json', 'tests', 'build', 'py'
+    '.git', '.github',
+    # 'README.md', 'LICENSE', 'CONTRIBUTING.md',
+    'tmp', 'node_modules', 'config', 'package-lock.json', 'package.json', 'tests', 'build'
 }
 
 temp_path = '../tmp'
@@ -77,6 +75,8 @@ def archive_zip(name):
 
 def chromium(manifest_version):
     copy_src_to_tmp()
+    if manifest_version == 2:
+        shutil.copy2('../build/manifest2.json', './manifest.json')
 
     with open('manifest.json', 'r+') as json_file:
         data = json.load(json_file)
@@ -97,6 +97,7 @@ def chromium(manifest_version):
 
 def firefox(manifest_version):
     copy_src_to_tmp()
+    shutil.copy2('../build/manifest3Firefox.json', './manifest.json')
 
     with open('background.js', 'r') as file:
         lines = file.readlines()
