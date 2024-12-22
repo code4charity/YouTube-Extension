@@ -12,7 +12,7 @@
 		"128": "menu/icons/128.png"
 	},
 	"background": {
-		"service_worker": "background.js",
+		"service_worker": "background.js"
 	},
 	"action": {
 		"default_popup": "menu/index.html",
