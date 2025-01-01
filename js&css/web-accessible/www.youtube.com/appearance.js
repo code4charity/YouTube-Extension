@@ -349,13 +349,14 @@ ImprovedTube.transcript = function (el) { if (ImprovedTube.storage.transcript ==
  CHAPTERS
 --------------------------------------------------------------*/
 ImprovedTube.chapters = function (el) { if (ImprovedTube.storage.chapters === true) {
-	const available = el.querySelector('[target-id*=chapters][visibility*=HIDDEN]') || el.querySelector('[target-id*=chapters]')?.clientHeight;
+	const available = el.querySelector('[target-id*=chapters][visibility*=HIDDEN]')
+			|| el.querySelector('[target-id*=chapters]')?.clientHeight;
 	if (available) {
-		ImprovedTube.forbidFocus(2100);
+		//ImprovedTube.forbidFocus(2100);
 		const modernChapters = el.querySelector('[modern-chapters] #navigation-button button[aria-label]');
 		modernChapters ? modernChapters.click() : el.querySelector('[target-id*=chapters]')?.removeAttribute('visibility');
 		if ( yt.config_.EXPERIMENT_FLAGS.kevlar_watch_grid === true ) { available.setAttribute('z-index', '98765') }
-	}  
+	}
 }};	
 /*------------------------------------------------------------------------------
  LIVECHAT
