@@ -19,6 +19,8 @@ to enrich your video experience & enable your content selection.
   *"This Might Be the Only YouTube Browser Extension You'll Ever Need"*
 - [ghacks.net](https://www.ghacks.net/2021/03/26/improved-youtube-enhances-youtube-in-meaningful-ways/)
   *"Improved YouTube! enhances YouTube in meaningful ways"*
+- [Chris Titus Tech](https://christitus.com/improve-youtube/)
+  *"The ImprovedTube extension has been enhancing the YouTube experience for users across all browsers"*
 
 <!-- - [chip.de](https://www.chip.de/downloads/Improve-YouTube-fuer-Chrome_183480435.html) -->
 
